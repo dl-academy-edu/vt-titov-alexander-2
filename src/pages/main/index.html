@@ -1,43 +1,179 @@
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="/common.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Главная</title>
-  </head>
-  <body>
-    @@include('header/index.html')
-    <main class="index-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Главная</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на главной  странице
-        </h2>
-        <div class="parallax-card">
-          <div class="parallax-card__wrapper-img">
-            <img
-              class="parallax-card__img"
-              src="static/images/cactus.jpg"
-              alt="Картинка кактуса"
-            />
-          </div>
 
-          <div class="parallax-card__description">
-            <p class="parallax-card__paragraph">Кактус маминой подруги</p>
-            <p class="parallax-card__paragraph">
-              Не нужно поливать и никогда не сохнет
-            </p>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Design life Kids</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+  @@include('header/index.html')
+
+  <main class="content">
+    <section class="container poster">
+      <div class="poster-div_background">
+        <div class="poster-slid">
+          <span class="num">01</span>
+          <button class="line line-activ"></button>
+          <button class="line"></button>
+          <button class="line"></button>
+          <button class="line"></button>
         </div>
+        <div class="poster-div_title">
+          <h2 class="title-poster">THE OOH NOO COLLECTION</h2>
+          <p class="made-in">Designed in Slovenia</p>
+          @@include('button/index.html',{
+          "text" : "EXPLORE NOW",
+          "class" : "button-explore button-explore_js"
+          })
+        </div>
+        <span class="poster-img"><img src="/static/images/poster.png" alt="image-poster"></span>
       </div>
-    </main>
-    @@include('footer/index.html')
-  </body>
+      <div class="poster-div">
+        Free (continental) USA shipping on all orders of $100 USD or more!
+      </div>
+    </section>
+    <section class="category container">
+      <h2 class="title-h3 title-cat">Category Products</h2>
+      <ul class="category-list">
+        <li class="product-list "><a class="product-item focus-product" href="#"
+            style="background-image: url(/static/images/kids.jpg);"><span class="product-title ">APPAREL
+              KIDS</span>
+          </a></li>
+        <li class="product-list"><a class="product-item focus-product" href="#"
+            style="background-image: url(/static/images/shop.jpg);"><span class="product-title ">HOLIDAY
+              SHOP</span>
+          </a></li>
+        <li class="product-list"><a class="product-item focus-product" href="#"
+            style="background-image: url(/static/images/toys.jpg);"><span class="product-title ">TOYS</span> </a></li>
+        <li class="product-list"><a class="product-item focus-product" href="#"
+            style="background-image: url(/static/images/ACCESSORIES.jpg);"><span
+              class="product-title ">ACCESSORIES</span> </a>
+        </li>
+      </ul>
+      <div class="slid-product ">
+        <ul class=" slid-info">
+          <li><button class="slid-left"></button></li>
+          <li><button class="slid-right"></button></li>
+        </ul>
+        <p class="text-info marketing-text">
+          Modern finds for the modern home. Curated goods by unique designers
+          around the world from fashion to furniture for kids and adults.
+        </p>
+      </div>
+    </section>
+    <section class="info container">
+      <div class="info-img">
+        <img src="/static/images/delivery.jpg" alt="image">
+      </div>
+      <div class="info-nav">
+        <h2 class="title-h3 title-info">Delivery</h2>
+        <ul class="info-list">
+          <li class="item-title"><a class="info-category info-category_activ" href="#">Delivery </a></li>
+          <li class="item-title"><a class="info-category" href="#">Guarantee </a></li>
+          <li class="item-title"><a class="info-category" href="#">Credit</a></li>
+        </ul>
+        <p class="text-info format-info_1">
+          Some days i feel like i've been working on dlk my entire life and
+          there are other days that i am completely shocked that four
+          years have flown by. It's simply magical.
+        </p>
+        <p class="text-info format-info_2">
+          What started as an outlet to deal with the traumatic loss of my
+          husband, dlk has now become a truly happy place for me and i
+          have you and all of the beautiful designers that we work with to thank!
+        </p>
+        <a class="button button_more" href="#">LEARN MORE</a>
+      </div>
+    </section>
+    <section class="sponsors container">
+      <h2 class="hidden">h</h2>
+      <ul class=" sponsor-list">
+        <li class="sponsor-list_item"><a href="https://corp.mail.ru/ru/">
+            <img src="/static/images/mail.png" alt="mail-group">
+          </a></li>
+        <li class="sponsor-list_item"><a href="https://www.apple.com/ru/">
+            <img src="/static/images/apple.png" alt="Aplle">
+          </a></li>
+        <li class="sponsor-list_item"><a href="https://eltex-co.ru/">
+            <img src="/static/images/eltex.png" alt="ELTEX">
+          </a></li>
+        <li class="sponsor-list_item"><a href="https://www.owox.ru/">
+            <img src="/static/images/owox.png" alt="OWOX">
+          </a></li>
+      </ul>
+    </section>
+    <section class="container about-us_map ">
+      <h2 class="hidden">h</h2>
+      <article class="about-us ">
+        <div class="about-us-info">
+          <h2 class="title-about ">Design Life Kids</h2>
+          <h3 class="about-us_subtitle">About Us</h3>
+          <p class="text-info about-text">
+            Some days i feel like i've been working on dlk my entire life and
+            there are other days that i am completely shocked that four
+            years have flown by. It's simply magical.
+          </p>
+          <a class="button button_buy" href="#">buy now</a>
+        </div>
+      </article>
+
+      <article class="contacts">
+        <div class="contact-info">
+          <h2 class="title-contacts">Contacts</h2>
+          <p class="text-info contacts-text">
+            Some days i feel like i've been working on dlk my entire life and
+            there are other days that i am completely shocked that four
+            years have flown by. It's simply magical.
+          </p>
+          <a class="contacts-map" href="#">
+            <img src="/static/images/map-contact.png" alt="Map-contact">
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  @@include('footer/index.html')
+
+  <div class="modal-background modal-background_js modal-close  ">
+    <form class="modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+      <label class="modal-label">
+        <span class="lable-text">Name</span>
+        <input class="long-input long-input_js" type="text" name="name">
+      </label>
+      <div class="data">
+        <label class="modal-label-short">
+          <span class="lable-text">Phone</span>
+          <input class="short-input" type="tel" name="phone">
+        </label>
+        <label class="modal-label-short">
+          <span class="lable-text">Email</span>
+          <input class="short-input" type="email" name="email">
+        </label>
+      </div>
+      <label class="modal-label">
+        <span class="lable-text">Message</span>
+        <textarea class="form-textarea" name="message"></textarea>
+      </label>
+      <label class="modal-consent">
+        <input class="hidden modal-checkbox" type="checkbox" name="accept">
+        <span class="modal-checkbox-indicator"></span>
+        <span class="text-consent">By clicking on the button, you consent to the
+          processing of your personal data</span>
+      </label>
+      <button class="modal-submit" type="submit">Submit</button>
+      <button class="modal-close-button modal-close-button_js" type="button"> </button>
+    </form>
+  </div>
   <script src="script.js"></script>
+</body>
+
+
 </html>
