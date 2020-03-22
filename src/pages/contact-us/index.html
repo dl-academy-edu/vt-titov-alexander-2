@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Design life Kids</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  @@include('header/index.html',{
+    "href" : "/index.html"
+  })
+  <main class="container con-us">
+    <div class="title-breadcrumbs margin">
+      <h2 class="title-h2 bread-title">Contact Us</h2>
+      <ul class=" breadcrumbs">
+        <li><a class="breadcrumbs-text hover-text" href="/index.html">Home</a></li>
+        <li><span class="breadcrumbs-arrow breadcrumbs-arrow_many"></span></li>
+        <li class="breadcrumbs-text breadcrumbs-activ">Contact Us</li>
+      </ul>
+    </div>
+    <section class="c-us ">
+      <h2 class="hidden">h</h2>
+      <div class="c-form">
+        <form class="popap-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+          <label class="popap-label">
+            <span class="popap-lable-text">Name</span>
+            <input class="popap-long-input" type="text" name="name" placeholder="Ivan Ivanov">
+          </label>
+          <div class="popap-data">
+            <label class="popap-label">
+              <span class="popap-lable-text">Phone</span>
+              <input class="popap-short-input" type="tel" name="phone">
+            </label>
+            <label class="popap-label">
+              <span class="popap-lable-text">Email</span>
+              <input class="popap-short-input" type="email" name="email">
+            </label>
+          </div>
+          <label class="popap-label">
+            <span class="popap-lable-text">Message</span>
+            <textarea class="popap-form-textarea" name="message"></textarea>
+          </label>
+          <label class="popap-consent-label">
+            <input class="hidden popap-input" type="checkbox" name="accept" checked>
+            <span class="popap-checkbox-indicator"></span>
+            <span class="popap-text-consent">By clicking on the button, you consent to the
+              processing of your personal data</span>
+          </label>
+          @@include('button/index.html',{
+            "text":"Submit",
+            "class" : "button popap-submit"
+            })
+          
+        </form>
+        <div class="c-us-info">
+          <p class="c-us-text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+          <p class="c-us-text">
+            Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.
+          </p>
+          <p class="important">An expert is waiting to help you!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html')
+</body>
+
+</html>

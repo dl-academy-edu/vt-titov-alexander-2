@@ -1,4 +1,5 @@
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -13,24 +14,39 @@
 </head>
 
 <body>
-  @@include('header/index.html')
-
+  @@include('header/index.html',{
+  "href" : ""
+  })
   <main class="content">
     <section class="container poster">
       <div class="poster-div_background">
         <div class="poster-slid">
           <span class="num">01</span>
-          <button class="line line-activ"></button>
-          <button class="line"></button>
-          <button class="line"></button>
-          <button class="line"></button>
+
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "line line-activ"
+          })
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "line"
+          })
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "line"
+          })
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "line"
+          })
+
         </div>
         <div class="poster-div_title">
           <h2 class="title-poster">THE OOH NOO COLLECTION</h2>
           <p class="made-in">Designed in Slovenia</p>
-          @@include('button/index.html',{
+          @@include('button/index.html', {
           "text" : "EXPLORE NOW",
-          "class" : "button-explore button-explore_js"
+          "class" : "button button-explore button-explore_js"
           })
         </div>
         <span class="poster-img"><img src="/static/images/poster.png" alt="image-poster"></span>
@@ -50,7 +66,7 @@
             style="background-image: url(/static/images/shop.jpg);"><span class="product-title ">HOLIDAY
               SHOP</span>
           </a></li>
-        <li class="product-list"><a class="product-item focus-product" href="#"
+        <li class="product-list"><a class="product-item focus-product" href="/pages/toys/index.html"
             style="background-image: url(/static/images/toys.jpg);"><span class="product-title ">TOYS</span> </a></li>
         <li class="product-list"><a class="product-item focus-product" href="#"
             style="background-image: url(/static/images/ACCESSORIES.jpg);"><span
@@ -59,8 +75,15 @@
       </ul>
       <div class="slid-product ">
         <ul class=" slid-info">
-          <li><button class="slid-left"></button></li>
-          <li><button class="slid-right"></button></li>
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "slid-left"
+          })
+          @@include('button/index.html', {
+          "text" : "",
+          "class" : "slid-right"
+          })
+
         </ul>
         <p class="text-info marketing-text">
           Modern finds for the modern home. Curated goods by unique designers
@@ -139,9 +162,7 @@
       </article>
     </section>
   </main>
-
   @@include('footer/index.html')
-
   <div class="modal-background modal-background_js modal-close  ">
     <form class="modal-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
       <label class="modal-label">
@@ -168,8 +189,16 @@
         <span class="text-consent">By clicking on the button, you consent to the
           processing of your personal data</span>
       </label>
-      <button class="modal-submit" type="submit">Submit</button>
-      <button class="modal-close-button modal-close-button_js" type="button"> </button>
+
+      @@include('button/index.html',{
+      "text":"Submit",
+      "class" : "modal-submit"
+      })
+      @@include('button/index.html',{
+      "text":"",
+      "class" : "modal-close-button modal-close-button_js",
+      "type" : "button"
+      })
     </form>
   </div>
   <script src="script.js"></script>

@@ -1,0 +1,368 @@
+.toy-content {
+  margin-bottom: 62px;
+}
+
+.toy {
+  margin-bottom: 48px;
+}
+
+.filtr {
+  position: relative;
+  margin-bottom: 143px;
+}
+
+.filtr::before {
+  position: absolute;
+  content: "";
+  left: -110px;
+  top: 0px;
+  width: 1400px;
+  height: 254px;
+  background-color: rgba(125, 151, 218, 0.2);
+}
+
+.title-toy {
+  display: block;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.filtr-form {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 1095px;
+  height: 170px;
+  padding-top: 42px;
+}
+
+.fieldset-range {
+  position: relative;
+  width: 188px;
+  margin: 0px 113px 0px 0px;
+}
+
+.range {
+  position: relative;
+  z-index: 1;
+  top: -2px;
+  left: 5px;
+  -webkit-appearance: none;
+  width: 188px;
+  height: 4px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 14px;
+}
+
+#range-bg {
+  position: absolute;
+  z-index: 2;
+  top: 46px;
+  left: 5px;
+  max-width: 188px;
+  width: 18%;
+  height: 4px;
+  outline: none;
+  background: #c29974;
+  margin-bottom: 14px;
+}
+
+.range-num {
+  position: absolute;
+  width: 206px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 3;
+  width: 24px;
+  height: 24px;
+  border: 8px solid #c29974;
+  border-radius: 20px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.sort-item {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1095px;
+  margin: 42px 0px 42px 110px;
+}
+
+.fieldset-checkbox {
+  display: flex;
+  margin: 0px 124px 0px 0px;
+}
+
+.checkbox-label {
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-checkbox-indicator {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #c29974;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.form-checkbox:checked + .form-checkbox-indicator::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  right: 0px;
+  background-image: url(/static/images/vector.png);
+  width: 14px;
+  height: 14px;
+}
+
+.form-checkbox:focus ~ .filter-text {
+  text-decoration: underline;
+}
+
+.checkbox-label:hover {
+  cursor: pointer;
+}
+
+.checkbox-label:hover > .filter-text {
+  text-decoration: underline;
+}
+
+.form-checkbox:checked + .form-checkbox-indicator {
+  background-color: #ffffff;
+}
+
+.form-checkbox:disabled ~ .filter-text {
+  color: #908484;
+  text-decoration: none;
+}
+
+.form-checkbox:disabled + .form-checkbox-indicator {
+  border: 2px solid #e1cdba;
+}
+
+.filter-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1e0606;
+}
+
+.fieldset-radio {
+  margin: 0px 69px 0px 0px;
+}
+
+.radio-label {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-radio-indicator {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c29974;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.input-radio:checked + .form-radio-indicator::before {
+  content: "";
+  position: absolute;
+  background: #c29974;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+}
+
+.input-radio:focus ~ .filter-text {
+  text-decoration: underline;
+}
+
+.input-radio:hover ~ .filter-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.input-radio:disabled ~ .filter-text {
+  color: #908484;
+  text-decoration: none;
+}
+
+.input-radio:disabled + .form-radio-indicator {
+  border: 2px solid #e1cdba;
+}
+
+.fieldset-amount {
+  margin: 0px 60px 0px 0px;
+}
+
+.amount-sort {
+  display: flex;
+}
+
+.indicator-amount {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 35px;
+  background-color: #ffffff;
+}
+
+.input-amount:checked + .indicator-amount {
+  background-color: #f3d0db;
+}
+
+.input-amount:focus + .indicator-amount {
+  background-color: #eddeeb;
+}
+
+.amount-label:hover .indicator-amount {
+  background-color: #eddeeb;
+  cursor: pointer;
+}
+
+.amount-label {
+  position: relative;
+}
+
+.num-0-5::before {
+  position: absolute;
+  content: "0-5";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.num-10-20::before {
+  position: absolute;
+  content: "10-20";
+  left: 24%;
+  top: 20%;
+}
+
+.num-20-50::before {
+  position: absolute;
+  content: "20-50";
+  left: 24%;
+  top: 20%;
+}
+
+.fieldset-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1e0606;
+  margin-bottom: 15px;
+}
+
+.button_apply {
+  margin-top: 36px;
+  width: 95px;
+  height: 41px;
+}
+
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px 0px 31px 0px;
+}
+
+.sort-list {
+  margin-bottom: 30px;
+}
+
+.item-sort {
+  width: 380px;
+}
+
+.sort-href {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sort-img {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.item-img {
+  position: absolute;
+
+  top: 17%;
+  left: 23%;
+
+  width: 207px;
+  height: 207px;
+
+  background-color: #e5eaf8;
+  opacity: 0;
+}
+
+.text-img {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 29px;
+  text-transform: uppercase;
+  padding: 82px 12px 96px 11px;
+  color: #1e0606;
+  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+}
+
+.sort-href:hover .item-img {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.sort-href:active .item-img {
+  opacity: 0.67;
+}
+
+.sort-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #1e0606;
+  margin-bottom: 16px;
+}
+
+.sort-price {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1e0606;
+  margin-bottom: 46px;
+}

@@ -32,7 +32,11 @@
       <li>
         <form class="input-sub" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
           <input class="form-input" type="email" name="email" id="form-input" placeholder="Email">
-          <button type="submit" class="button button-join">Join</button>
+          @@include('button/index.html',{
+            "text":"Join",
+            "class" : "button button-join"
+            })
+          
         </form>
       </li>
       <li>

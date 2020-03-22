@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Design life Kids</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  @@include('header/index.html',{
+    "href" : "/index.html"
+  })
+  <main class="container catalog">
+    <div class="title-breadcrumbs">
+      <h2 class="title-h2 bread-title">Category Products</h2>
+      <ul class=" breadcrumbs">
+        <li><a class="breadcrumbs-text hover-text" href="/index.html">Home</a></li>
+        <li><span class="breadcrumbs-arrow breadcrumbs-arrow_many"></span></li>
+        <li class="breadcrumbs-text breadcrumbs-activ">Catalog</li>
+      </ul>
+    </div>
+    <section class="catalog-category">
+      <ul class="ctg-list">
+        <li class="prod-list"><a class="product-item focus-product" href="#" style="background-image: url(/static/images/kids.jpg);"><span class="product-title ">APPAREL
+              KIDS</span>
+          </a></li>
+        <li class="prod-list"><a class="product-item focus-product" href="#" style="background-image: url(/static/images/shop.jpg);"><span class="product-title ">HOLIDAY
+              SHOP</span>
+          </a></li>
+        <li class="prod-list"><a class="product-item focus-product" href="/pages/toys/index.html" style="background-image: url(/static/images/toys.jpg);"><span
+              class="product-title ">TOYS</span> </a></li>
+        <li class="prod-list"><a class="product-item focus-product" href="#" style="background-image: url(/static/images/ACCESSORIES.jpg);"><span
+              class="product-title ">ACCESSORIES</span> </a>
+        </li>
+        <li class="prod-list"><a class="product-item focus-product" href="#" style="background-image: url(/static/images/sale.jpg);"><span class="product-title ">SALE</span>
+          </a>
+        </li>
+        <li class="prod-list"><a class="product-item focus-product" href="#" style="background-image: url(/static/images/ADULTS.jpg);"><span class="product-title ">APPAREL
+              ADULTS</span> </a>
+        </li>
+      </ul>
+      <div class="description">
+        <h2 class="title-h3 mb10">Product Description</h2>
+        <p class="text-info description-info">
+          Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really
+          cry. You can even bathe her, just like a little sister.
+        </p>
+        <p class="text-info description-info">
+          A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a
+          doll will be an excellent choice for a gift for a girl from 4 years old.
+        </p>
+        <p class="text-info description-info">
+          The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a
+          pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the
+          other for her young mistress.
+        </p>
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html')
+</body>
+
+</html>

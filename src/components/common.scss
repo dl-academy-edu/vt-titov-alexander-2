@@ -43,6 +43,20 @@ fieldset {
   overflow: hidden;
 }
 
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+
+
+
 .title-breadcrumbs {
   display: flex;
   flex-direction: column;
@@ -113,12 +127,7 @@ fieldset {
   transform: rotate(223deg);
 }
 
-.container {
-  width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 
 input:not(.range .form-input):hover {
   border: 2px solid rgba(0, 0, 0, 0.3);
@@ -127,9 +136,6 @@ input:not(.range .form-input):hover {
 textarea:hover {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 /* title */
 
@@ -206,10 +212,6 @@ textarea:hover {
 .focus-product:focus .product-title {
   text-decoration: underline;
 }
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
-@import "./button/button";
 
 .slider-nav {
   display: flex;
@@ -306,3 +308,4 @@ textarea:hover {
 .active-page {
   opacity: 0.5;
 }
+
