@@ -187,7 +187,7 @@
 }
 
 .rating-area:not(:checked) > label {
-  background-image: url(/images/Star-white.png);
+  background-image: url(/static/images/Star-white.png);
   background-repeat: no-repeat;
   float: right;
   width: 16px;
@@ -199,13 +199,13 @@
 }
 
 .rating-area > input:checked ~ label {
-  background-image: url(/images/Star-gold.png);
+  background-image: url(/static/images/Star-gold.png);
   background-repeat: no-repeat;
 }
 
 .rating-area:not(:checked) > label:hover,
 .rating-area:not(:checked) > label:hover ~ label {
-  background-image: url(/images/Star-gold.png);
+  background-image: url(/static/images/Star-gold.png);
   background-repeat: no-repeat;
 }
 
