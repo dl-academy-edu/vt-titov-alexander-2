@@ -1,28 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="/common.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
-    <link rel="shortcut icon" href="/static/images/favicon.ico" />
-    <title>Игрушки</title>
-  </head>
-  <body>
-    @@include('header/index.html')
-    <main class="toys-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Игрушки</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на странице игрушек
-        </h2>
-      </div>
-    </main>
-    @@include('footer/index.html')
-  </body>
-  <script src="index.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Toys</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700i%7CMontserrat:400,700%7COpen+Sans:400,700%7CRoboto:400,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  @@include('header/index.html',{
+    "href" : "/index.html"
+  })
+  <main class="container toy-content">
+    <div class="title-breadcrumbs toy">
+      <h2 class="title-h2 bread-title">Toy for kids</h2>
+      <ul class=" breadcrumbs">
+        <li><a class="breadcrumbs-text hover-text" href="/index.html">Home</a></li>
+        <li><span class="breadcrumbs-arrow breadcrumbs-arrow_many"></span></li>
+        <li><a class="breadcrumbs-text hover-text" href="/pages/catalog/index.html">Catalog</a></li>
+        <li><span class="breadcrumbs-arrow breadcrumbs-arrow_many"></span></li>
+        <li class="breadcrumbs-text breadcrumbs-activ">Toys</li>
+      </ul>
+    </div>
+    <section class="filtr">
+      <h1 class="hidden">Hidden</h1>
+      <div class="background-filtr"></div>
+      <form class="filtr-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+        <fieldset class="fieldset-range">
+          <legend class="fieldset-title">Cost</legend>
+          <input class="range" type="range" id="rng" min="0" max="500" value="105" oninput="r()">
+          <div id="range-bg"></div>
+          <div class="range-num">
+            <span class="filter-text">0</span>
+            <span class="filter-text">500</span>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-checkbox">
+          <legend class="fieldset-title">Color</legend>
+
+          <label class="checkbox-label">
+            <input class="form-checkbox hidden " type="checkbox" name="color" value="Black" checked>
+            <span class="form-checkbox-indicator"></span>
+            <span class="filter-text">Black</span> </label>
+
+          <label class="checkbox-label">
+            <input class="form-checkbox hidden " type="checkbox" name="color" value="Blue">
+            <span class="form-checkbox-indicator"></span>
+            <span class="filter-text">Blue</span> </label>
+
+          <label class="checkbox-label">
+            <input class="form-checkbox hidden " type="checkbox" name="color" value="Green">
+            <span class="form-checkbox-indicator"></span>
+            <span class="filter-text">Green</span></label>
+
+          <label class="checkbox-label">
+            <input class="form-checkbox hidden " type="checkbox" name="color" value="White">
+            <span class="form-checkbox-indicator"></span>
+            <span class="filter-text">White</span></label>
+        </fieldset>
+        <fieldset class="fieldset-radio">
+          <legend class="fieldset-title">Delivery</legend>
+
+          <label class="radio-label"><input class="hidden input-radio" type="radio" name="delivery" value="Free">
+            <span class="form-radio-indicator"></span>
+            <span class="filter-text "> Free shipping</span></label>
+          <label class=" radio-label"><input class="hidden input-radio" type="radio" name="delivery" value="Fast"
+              checked>
+            <span class="form-radio-indicator"></span>
+            <span class="filter-text">Fast shipping</span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset-amount">
+          <legend class="fieldset-title">Amount</legend>
+          <div class="amount-sort">
+            <label class="amount-label"><input class="hidden input-amount" type="radio" name="amount" value="0-5"
+                checked>
+              <span class="filter-text  num-0-5 indicator-amount"></span>
+            </label>
+            <label class="amount-label"><input class="hidden input-amount" type="radio" name="amount" value="10-20">
+              <span class="filter-text  num-10-20 indicator-amount"></span>
+            </label>
+            <label class="amount-label"><input class="hidden input-amount" type="radio" name="amount" value="20-50">
+              <span class="filter-text  num-20-50 indicator-amount"></span>
+            </label>
+            
+          </div>
+        </fieldset>
+        @@include('button/index.html',{
+          "text":"Apply",
+          "class" : "button button_apply",
+          "type" : "submit"
+          })
+        
+      </form>
+    </section>
+    <section class="sort-list">
+      <h2 class="hidden">Hidden</h2>
+      <ul class=" sort">
+        <li class="item-sort">
+          <a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/sharky.png" alt="SHARKY BEAN BAG CHAIR COVER">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">SHARKY BEAN BAG CHAIR COVER</span>
+            <span class="sort-price">$60.00 USD</span>
+          </a>
+        </li>
+        <li class="item-sort">
+          <a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/brass.png" alt="BRASS DECO FRAMES">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">BRASS DECO FRAMES</span>
+            <span class="sort-price">$66.00 USD</span>
+          </a>
+        </li>
+        <li class="item-sort"><a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/cibo.png" alt="CIBO FULL APRON">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">CIBO FULL APRON</span>
+            <span class="sort-price">$60.00 USD</span>
+          </a>
+        </li>
+        <li class="item-sort"><a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/gumball-machine.png" alt="GATCHA GATCHA GUMBALL MACHINE">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">GATCHA GATCHA GUMBALL MACHINE</span>
+            <span class="sort-price">$56.00 USD</span>
+          </a>
+        </li>
+        <li class="item-sort"><a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/candle.png" alt="CHRISTMAS ADVENT SCENTED CANDLE">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">CHRISTMAS ADVENT SCENTED CANDLE</span>
+            <span class="sort-price">$29.00 USD</span>
+          </a>
+        </li>
+        <li class="item-sort"><a class="sort-href" href="#">
+            <img class="sort-img" src="/static/images/tangle.png" alt="TANGLE SPINNING TEA LIGHT">
+            <div class="item-img text-img">LEARN MORE</div>
+            <span class="sort-text">TANGLE SPINNING TEA LIGHT</span>
+            <span class="sort-price">$56.00 USD</span>
+          </a>
+        </li>
+      </ul>
+      <ul class=" slider-nav">
+        <li class="nav-item"><a class="nav-left" href="#"></a></li>
+        <li class="num-list">
+          <a class="num action-num" href="#">1</a>
+          <a class="num num2" href="#">2</a>
+          <a class="num" href="#">3</a>
+          <a class="num" href="#">4</a>
+        </li>
+        <li class="nav-item"><a class="nav-right" href="#"></a></li>
+      </ul>
+    </section>
+  </main>
+  @@include('footer/index.html')
+  <script src="/pages/toys/script.js"></script>
+</body>
+
 </html>

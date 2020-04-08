@@ -1,0 +1,33 @@
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 9px 22px;
+  border: 0px;
+  display: block;
+  align-items: baseline;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #c29974;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: #c29974;
+}
+
+.button:active {
+  background-color: #cfaf91;
+}
+
+.button:disabled {
+  color: #e1e1e1;
+  background-color: #c1c1c1;
+}
