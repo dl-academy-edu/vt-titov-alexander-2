@@ -1,22 +1,253 @@
-footer {
-  background-color: #ffd042;
-  height: 80px;
+/* footer */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #434343;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 100px 110px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin-right: -20px;
+}
+
+.footer-title {
+  margin: 0px 0px 23px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  color: #aaaaaa;
+}
+
+.footer-list {
+  margin-bottom: 15px;
+}
+
+.list-end {
+  margin-bottom: 28px;
+}
+
+.design-list-line {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.design-line::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+}
+
+.footer-list-line {
+  position: relative;
+  margin-bottom: 29px;
+}
+
+.footer-line::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 380px;
+  background-color: #666666;
+}
+
+.line-long {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.footer-line-long::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 400px;
+  background-color: #666666;
+}
+
+.footer-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.footer-text:hover {
+  opacity: 0.5;
+}
+
+.footer-text:active {
+  opacity: 0.2;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px 20px 0px 0px;
+  width: 380px;
+}
+
+.line-connect {
+  margin-bottom: 26px;
+}
+
+.form-input {
+  background-color: #666666;
+  width: 100%;
+  padding: 0px;
+  border: 1px solid transparent;
+}
+
+.form-input:hover {
+  background-color: #666666;
+  border-color: #fffdfd;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.form-input:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.form-input::placeholder {
+  padding-left: 14px;
+  color: #ebebeb;
+}
+
+.input-sub {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.button-join {
+  width: 81px;
+}
+
+.button-join:hover {
+  cursor: pointer;
+}
+
+.social {
+  display: flex;
+  list-style-type: none;
+  margin: 0px 0px 140px 0px;
+  padding-left: 0px;
+  
+}
+
+.social-list {
+  margin-right: 10px;
+}
+
+.social-list:hover {
+  opacity: 0.5;
+}
+
+.social-list:active {
+  opacity: 0.2;
+}
+
+.down-block {
+  display: flex;
+  padding-top: 23px;
+  border-top: 1px solid #666666;
+}
+
+/* rating */
+
+.rating-area {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  margin-right: 150px;
+}
 
-  span {
-    padding-right: 20px;
-  }
+.rating-area input:checked ~ p {
+  color: #c29974;
+}
 
-  a {
-    color: #000;
-    text-decoration: none;
+.rating-area input:hover ~ p {
+  color: #c29974;
+}
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.rating-area:not(:checked) > label {
+  background-image: url(/static/images/Star-white.png);
+  background-repeat: no-repeat;
+  float: right;
+  width: 16px;
+  height: 17px;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 3.88px;
+  margin-top: 4px;
+}
+
+.rating-area > input:checked ~ label {
+  background-image: url(/static/images/Star-gold.png);
+  background-repeat: no-repeat;
+}
+
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  background-image: url(/static/images/Star-gold.png);
+  background-repeat: no-repeat;
+}
+
+.rating-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0px 28px 0px 0px;
+  
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.design {
+  display: flex;
+  margin-right: 110px;
+}
+
+.design-title {
+  display: block;
+  color: #a2a2a2;
+  margin-top: 2px;
+}
+
+.design-title:hover {
+  opacity: 0.75;
+}
+
+.design-name {
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px;
+  bottom: 0px;
 }
